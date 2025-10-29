@@ -1,0 +1,79 @@
+﻿@model LowYurt3.Models.Producto
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Producto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NombreProducto" class="control-label">Nombre Producto</label>
+                <input asp-for="NombreProducto" class="form-control" />
+                <span asp-validation-for="NombreProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorUnitario" class="control-label">Valor Unitario</label>
+                <input asp-for="ValorUnitario" class="form-control" />
+                <span asp-validation-for="ValorUnitario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImagenProducto" class="control-label">Imagen Producto</label>
+                <input asp-for="ImagenProducto" class="form-control" />
+                <span asp-validation-for="ImagenProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCategoria" class="control-label">Tipo de Categoria</label>
+                <select asp-for="IdCategoria" class ="form-control" asp-items="ViewBag.IdCategoria"></select>
+                <span asp-validation-for="IdCategoria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear Producto" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+@if (ViewBag.Errors != null)
+{
+    <div class="alert alert-danger">
+        @foreach (var error in ViewBag.Errors)
+        {
+            <p>@error</p>
+        }
+    </div>
+}
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+@if (TempData["Mensaje1"] != null)
+{
+    <div id="mensajeExito" class="alert alert-success" role="alert">
+        @TempData["Mensaje1"]
+    </div>
+}
+<script>
+    setTimeout(function() {
+        var mensaje = document.getElementById('mensajeExito');
+        if (mensaje) {
+            mensaje.style.transition = 'opacity 0.5s';
+            mensaje.style.opacity = '0';
+            setTimeout(function() {
+                mensaje.remove();
+            }, 500); // Espera a que termine la transición antes de eliminar
+        }
+    }, 3000); // El mensaje desaparece después de 3 segundos
+</script>

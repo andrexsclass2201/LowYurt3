@@ -1,0 +1,258 @@
+﻿@model LowYurt3.Models.Cliente
+
+@{
+    ViewData["Title"] = "Crear Usuario";
+}
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20PX;
+            margin-top: 65px;
+            margin-bottom: 100px;
+            font-family: Arial, sans-serif;
+            background-size: contain;
+        }
+        .container {
+            max-width: 20000px;
+            padding: 5px;
+            margin: 0px;
+        }
+        .register-wrapper {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            flex: 1;
+            min-height: 700px;
+            padding: 0px;
+        }
+
+        .image-container .slide {
+            background-image: url('/img/img14.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .col-md-4 {
+            flex: 1.5;
+            padding: 20px;
+            padding-top: 10px;
+            padding-bottom:10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .col-md-4 h2 {
+            margin: 0px;
+            font-size: 25px;
+        }
+
+        .col-md-4 p {
+        font-size: 0.9em;
+        color: #666;
+        }
+
+        .form-group input {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .col-md-4 h3 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 20px;
+        }
+
+        .col-md-4 a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .col-md-4 a:hover {
+            text-decoration: underline;
+        }
+
+        .col-md-4 input[type="checkbox"] {
+            margin: 10px 0;
+        }
+
+        .col-md-4 label {
+            font-size: 0.9em;
+            margin-left: 5px;
+        }
+
+        .col-md-4 button {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+
+        .col-md-4 button:hover {
+            background-color: #fff;
+            background-color: #00000000;
+            color: #000000;
+        }
+
+        .mb-3 {
+            display: flex;
+            align-items: center;
+            margin-bottom:0px !important;
+        }
+
+        .form-check {
+            padding-left: 0px;
+        }
+        .form-check-input{
+            padding: 1px;
+            color: #000000;
+        }
+
+        .form-check-input:checked{
+                background-color: #000000;
+                border-color: #000000;
+        }
+        .form-control{
+            font-size: 15px;
+        }
+
+        .form-control:focus {
+            color: var(--bs-body-color);
+            background-color: var(--bs-body-bg);
+            border-color: #000000;
+            outline: 0;
+            box-shadow: none;
+                border: 2px solid #000000;
+        }
+        
+        .error-message {
+            color: #dc3545;
+            font-size: 0.875rem;
+        }
+
+        .form-check-input:focus {
+            box-shadow: none;
+        }
+        .terms-label a {
+            color: #28a745;
+            text-decoration: none;
+        }
+        .terms-label a:hover {
+            text-decoration: underline;
+        }
+        .btn{
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1em;
+            border: solid #ffffff;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="row">
+        <div class="image-container">
+            <div class="slide" style=background-image:url(&quot;/img/img14.jpg&quot;); ;></div>
+        </div>
+    <div class="col-md-4">
+            <h2>Registro</h2>
+            <p>Los campos obligatorios están marcados con un asterisco *.</p>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h3>Información personal</h3>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label">Nombre *</label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SegundoNombre" class="control-label">Segundo Nombre (Opcional)</label>
+                <input asp-for="SegundoNombre" class="form-control" />
+                <span asp-validation-for="SegundoNombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Apellido" class="control-label">Apellido *</label>
+                <input asp-for="Apellido" class="form-control" />
+                <span asp-validation-for="Apellido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SegundoApellido" class="control-label">Segundo Apellido (Opcional)</label>
+                <input asp-for="SegundoApellido" class="form-control" />
+                <span asp-validation-for="SegundoApellido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefono" class="control-label">Telefono Celular *</label>
+                <input asp-for="Telefono" class="form-control" />
+                <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Direccion" class="control-label">Direccion de Envio *</label>
+                <input asp-for="Direccion" class="form-control" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+                <h3>Seguridad</h3>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">Email *</label>
+                <input type="email"asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContraseñaTexto" class="control-label">Contraseña *</label>
+                <input type="password" asp-for="ContraseñaTexto" class="form-control" />
+                <span asp-validation-for="ContraseñaTexto" class="text-danger"></span>
+            </div>
+                <h3>Condiciones de uso</h3>
+                <div class="Coditions">
+                    <div class="mb-3 form-check">
+                        <input class="form-check-input" type="checkbox" required oninvalid="this.setCustomValidity('Por favor, acepta los términos y condiciones')" oninput="this.setCustomValidity('')" /> 
+                        <label class="form-check-label terms-label">
+                            Acepto que <a href="/Home/Terminos" target="_blank">He leído y acepto los Términos y Condiciones.</a>
+                        </label>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input class="form-check-input" type="checkbox" required/>
+                        <label class="form-check-label terms-label">
+                            Acepto la <a href="/Home/Terminos" target="_blank"> Política de tratamiento de datos.</a>
+                        </label>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+            <div class="form-group">
+                <input type="submit" value="CREAR CUENTA" class="btn" />
+            </div>
+        </form>
+            
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>

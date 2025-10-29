@@ -1,0 +1,217 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|c:\\felipe\\felipe\\page\\lowyurt3\\lowyurt3\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|solutionrelative:lowyurt3\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|c:\\felipe\\felipe\\page\\lowyurt3\\lowyurt3\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|solutionrelative:lowyurt3\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|c:\\felipe\\felipe\\page\\lowyurt3\\lowyurt3\\views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|solutionrelative:lowyurt3\\views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|c:\\felipe\\felipe\\page\\lowyurt3\\lowyurt3\\views\\admins\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|solutionrelative:lowyurt3\\views\\admins\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|c:\\felipe\\felipe\\page\\lowyurt3\\lowyurt3\\views\\carrito\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|solutionrelative:lowyurt3\\views\\carrito\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|c:\\felipe\\felipe\\page\\lowyurt3\\lowyurt3\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|solutionrelative:lowyurt3\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|c:\\felipe\\felipe\\page\\lowyurt3\\lowyurt3\\services\\paypalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|solutionrelative:lowyurt3\\services\\paypalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|c:\\felipe\\felipe\\page\\lowyurt3\\lowyurt3\\models\\pedidodetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|solutionrelative:lowyurt3\\models\\pedidodetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|c:\\felipe\\felipe\\page\\lowyurt3\\lowyurt3\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|solutionrelative:lowyurt3\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|c:\\felipe\\felipe\\page\\lowyurt3\\lowyurt3\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|solutionrelative:lowyurt3\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|c:\\felipe\\felipe\\page\\lowyurt3\\lowyurt3\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|solutionrelative:lowyurt3\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|c:\\felipe\\felipe\\page\\lowyurt3\\lowyurt3\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{470AF305-4DA6-4909-8E0A-788E5C0464C1}|LowYurt3\\LowYurt3.csproj|solutionrelative:lowyurt3\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "LowYurt3\\Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "LowYurt3\\Controllers\\ClientesController.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowE4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T22:29:24.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Views\\Clientes\\Edit.cshtml",
+              "RelativeDocumentMoniker": "LowYurt3\\Views\\Clientes\\Edit.cshtml",
+              "ToolTip": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Views\\Clientes\\Edit.cshtml",
+              "RelativeToolTip": "LowYurt3\\Views\\Clientes\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-23T22:27:54.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Views\\Admins\\Index.cshtml",
+              "RelativeDocumentMoniker": "LowYurt3\\Views\\Admins\\Index.cshtml",
+              "ToolTip": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Views\\Admins\\Index.cshtml",
+              "RelativeToolTip": "LowYurt3\\Views\\Admins\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-23T22:14:12.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Views\\Account\\Profile.cshtml",
+              "RelativeDocumentMoniker": "LowYurt3\\Views\\Account\\Profile.cshtml",
+              "ToolTip": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Views\\Account\\Profile.cshtml",
+              "RelativeToolTip": "LowYurt3\\Views\\Account\\Profile.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAEAAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-23T22:02:08.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "LowYurt3\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "LowYurt3\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-23T20:09:15.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PayPalService.cs",
+              "DocumentMoniker": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Services\\PayPalService.cs",
+              "RelativeDocumentMoniker": "LowYurt3\\Services\\PayPalService.cs",
+              "ToolTip": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Services\\PayPalService.cs",
+              "RelativeToolTip": "LowYurt3\\Services\\PayPalService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwCQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T20:23:00.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\appsettings.json",
+              "RelativeDocumentMoniker": "LowYurt3\\appsettings.json",
+              "ToolTip": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\appsettings.json",
+              "RelativeToolTip": "LowYurt3\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-22T20:15:57.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CarritoController.cs",
+              "DocumentMoniker": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Controllers\\CarritoController.cs",
+              "RelativeDocumentMoniker": "LowYurt3\\Controllers\\CarritoController.cs",
+              "ToolTip": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Controllers\\CarritoController.cs",
+              "RelativeToolTip": "LowYurt3\\Controllers\\CarritoController.cs",
+              "ViewState": "AgIAAEIBAAAAAAAAAAAcwOYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T20:53:04.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Models\\Pedido.cs",
+              "RelativeDocumentMoniker": "LowYurt3\\Models\\Pedido.cs",
+              "ToolTip": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Models\\Pedido.cs",
+              "RelativeToolTip": "LowYurt3\\Models\\Pedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T20:31:21.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PedidoDetalle.cs",
+              "DocumentMoniker": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Models\\PedidoDetalle.cs",
+              "RelativeDocumentMoniker": "LowYurt3\\Models\\PedidoDetalle.cs",
+              "ToolTip": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Models\\PedidoDetalle.cs",
+              "RelativeToolTip": "LowYurt3\\Models\\PedidoDetalle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T20:30:53.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Models\\Producto.cs",
+              "RelativeDocumentMoniker": "LowYurt3\\Models\\Producto.cs",
+              "ToolTip": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Models\\Producto.cs",
+              "RelativeToolTip": "LowYurt3\\Models\\Producto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T19:39:57.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Views\\Carrito\\Index.cshtml",
+              "RelativeDocumentMoniker": "LowYurt3\\Views\\Carrito\\Index.cshtml",
+              "ToolTip": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Views\\Carrito\\Index.cshtml",
+              "RelativeToolTip": "LowYurt3\\Views\\Carrito\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T20:11:12.067Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

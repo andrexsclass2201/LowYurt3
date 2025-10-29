@@ -1,0 +1,101 @@
+﻿@{
+    ViewData["Title"] = "Olvidar Contraseña";
+}
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 700px;
+        margin: 70PX;
+        font-family: Arial, sans-serif;
+        background-size: contain;
+    }
+
+    .login-container {
+        text-align: left;
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: -90px;
+    }
+
+    .login-container h2 {
+        margin-bottom: 10px;
+    }
+
+    .login-container p {
+        font-size: 0.9em;
+        margin-bottom: 0px;
+        color: #666;
+    }
+
+    .login-container input {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .login-container button {
+        background-color: #000000;
+        color: #fff;
+        padding: 10px 20px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 1em;
+        border: solid #ffffff;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .login-container button:hover {
+        background-color: #00000000;
+        color: #000000;
+        border-color: black;
+    }
+
+    .login-container .links a {
+        color: #000000;
+        text-decoration: none;
+        font-size: 0.9em;
+    }
+
+    .login-container .links a:hover {
+        text-decoration: underline;
+    }
+</style>
+<body>
+    <div class="login-container">
+        <a href="/Account/Login" style="color: #000; text-decoration: none;">← Volver</a>
+        <h2>Contraseña Olvidada</h2>
+        <p>Introduzca la dirección de correo electrónico utilizada para registrar su cuenta Low Yurt.</p>
+        <p>Los campos obligatorios están marcados con un asterisco*.</p>
+        <form>
+            <label>Ingrese su correo electrónico *</label>
+            <input type="email" placeholder="  *Correo Electronico" required>
+            <button type="submit">RESTABLECER CONTRASEÑA</button>
+        </form>
+        </div>
+</body>
+@if (TempData["Mensaje"] != null)
+{
+    <div id="mensajeExito" class="alert alert-success" role="alert">
+        @TempData["Mensaje"]
+    </div>
+}
+<script>
+    setTimeout(function() {
+        var mensaje = document.getElementById('mensajeExito');
+        if (mensaje) {
+            mensaje.style.transition = 'opacity 0.5s';
+            mensaje.style.opacity = '0';
+            setTimeout(function() {
+                mensaje.remove();
+            }, 500); // Espera a que termine la transición antes de eliminar
+        }
+    }, 3000); // El mensaje desaparece después de 3 segundos
+</script>
+<div style="height: 50px;"></div>

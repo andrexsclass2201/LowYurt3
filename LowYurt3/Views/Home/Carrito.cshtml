@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Carrito";
+}
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+            margin: 70PX;
+            font-family: Arial, sans-serif;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Carrito de Compras</h1>
+        <div class="cart-item">
+            <img src="https://via.placeholder.com/50" alt="Producto 1">
+            <div class="cart-item-details">
+                <h3>Producto 1</h3>
+                <p>Descripción breve del producto.</p>
+            </div>
+            <div class="cart-item-quantity">
+                <button onclick="updateQuantity('quantity1', -1)">-</button>
+                <input type="number" id="quantity1" value="1" min="1">
+                <button onclick="updateQuantity('quantity1', 1)">+</button>
+            </div>
+            <div class="cart-item-price">$20.00</div>
+            <button class="remove-btn" onclick="removeItem(this)">Eliminar</button>
+        </div>
+        <div class="cart-item">
+            <img src="https://via.placeholder.com/50" alt="Producto 2">
+            <div class="cart-item-details">
+                <h3>Producto 2</h3>
+                <p>Descripción breve del producto.</p>
+            </div>
+            <div class="cart-item-quantity">
+                <button onclick="updateQuantity('quantity2', -1)">-</button>
+                <input type="number" id="quantity2" value="1" min="1">
+                <button onclick="updateQuantity('quantity2', 1)">+</button>
+            </div>
+            <div class="cart-item-price">$15.00</div>
+            <button class="remove-btn" onclick="removeItem(this)">Eliminar</button>
+        </div>
+        <div class="cart-total">
+            Total: <span id="total">$35.00</span>
+        </div>
+        <a href="#" class="checkout-btn">Proceder al Pago</a>
+    </div>
+
+    <script>
+        function updateQuantity(inputId, change) {
+            const input = document.getElementById(inputId);
+            let quantity = parseInt(input.value) + change;
+            if (quantity < 1) quantity = 1;
+            input.value = quantity;
+            updateTotal();
+        }
+
+        function removeItem(button) {
+            button.parentElement.remove();
+            updateTotal();
+        }
+
+        function updateTotal() {
+            let total = 0;
+            document.querySelectorAll('.cart-item').forEach(item => {
+                const price = parseFloat(item.querySelector('.cart-item-price').textContent.replace('$', ''));
+                const quantity = parseInt(item.querySelector('input').value);
+                total += price * quantity;
+            });
+            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

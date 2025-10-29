@@ -1,0 +1,158 @@
+﻿@model IEnumerable<LowYurt3.Models.Producto>
+
+@{
+    ViewData["Title"] = "Productos";
+}
+
+<!--
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+-->
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 68px;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .products {
+            padding: 20px 20px;
+            margin-bottom: 80px;
+        }
+
+        .product-card {
+            display: flex;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-card a {
+            margin-bottom:10px;
+        }
+        .price {
+            font-size: 1.25rem;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .category {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .action-links a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+                <h1>Index</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NombreProducto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descripcion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ValorUnitario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdCategoriaNavigation)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model)
+    {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NombreProducto)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Descripcion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ValorUnitario)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IdCategoriaNavigation.IdCategoria)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.IdProducto">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.IdProducto">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.IdProducto">Delete</a>
+                        </td>
+                    </tr>
+    }
+        </tbody>
+    </table>
+    -->
+    <div class="products">
+        <h1 class="text-center mb-4">Catálogo de Productos</h1>
+        <div class="products-grid">
+            @foreach (var item in Model)
+            {
+                <div class="product-card">
+
+                    <img src="@(item.ImagenProducto ?? "https://via.placeholder.com/300x200")" alt="@Html.DisplayFor(modelItem => item.NombreProducto)">
+                    <h3>@Html.DisplayFor(modelItem => item.NombreProducto)</h3>
+                    <p>@Html.DisplayFor(modelItem => item.Descripcion)</p>
+                    <p class="price">$@Html.DisplayFor(modelItem => item.ValorUnitario)</p>
+                    <p class="category">Categoría: @Html.DisplayFor(modelItem => item.IdCategoriaNavigation.NombreCategoria)</p>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        if (User.IsInRole("Admin"))
+                        {
+                            <a asp-action="Edit" asp-route-id="@item.IdProducto" class="btn btn-sm btn-primary">Editar</a>
+                            <a asp-action="Delete" asp-route-id="@item.IdProducto" class="btn btn-sm btn-danger">Eliminar</a>
+                        }
+                        else if (User.IsInRole("Cliente"))
+                        {
+                            <a asp-action="Details" asp-route-id="@item.IdProducto" class="btn btn-sm btn-info">Detalles</a>
+                            <a asp-controller="Carrito" asp-action="Agregar" asp-route-id="@item.IdProducto" class="btn btn-primary">Agregar al Carrito</a>
+                        }
+                    }
+                    else
+                    {
+                        <a asp-action="Details" asp-route-id="@item.IdProducto" class="btn btn-sm btn-info">Detalles</a>
+                        <a asp-controller="Carrito" asp-action="Agregar" asp-route-id="@item.IdProducto" class="btn btn-primary">Agregar al Carrito</a>
+                    }
+                </div>
+            }
+            @if (User.IsInRole("Admin"))
+            {
+                <div class="product-card">
+                    <img src="~/img/Icon-agregar.png" alt="Nuevo Producto">
+                <p></p>
+                    <h3>Agrega un nuevo producto</h3>
+                    <a asp-action="Create" class="btn btn-primary">Nuevo Producto</a>
+                </div>
+            }
+
+        </div>
+    </div>
+</body>

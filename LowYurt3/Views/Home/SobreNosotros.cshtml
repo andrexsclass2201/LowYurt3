@@ -1,0 +1,123 @@
+﻿@model IEnumerable<LowYurt3.Models.Producto>
+
+@{
+    ViewData["Title"] = "Sobre Nosotros";
+}
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+            margin: 70PX;
+            font-family: Arial, sans-serif;
+            background-size: contain;
+        }
+        .sobre-nosotros {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* --- ¿Qué es Low-Yurt? --- */
+        .que-es {
+            max-width: 900px;
+            margin: 0 auto 60px auto;
+            padding: 20px;
+            text-align: justify;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .que-es h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #333;
+        }
+        .mision{
+            flex: 1;
+            min-width: 280px;
+            max-width: 500px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            text-align: justify;
+        }
+        .vision{
+            flex: 1;
+            min-width: 280px;
+            max-width: 500px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            text-align: justify;
+        }
+        /* --- Contenedor Misión y Visión --- */
+        .mision-vision {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap; /* permite que se acomode en celular */
+        }
+
+        .mision h2, .vision h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #333;
+        }
+        .mision-vision {
+            align-items: center;
+        }
+
+        .mision, .vision {
+            max-width: 100%;
+        }
+
+    </style>
+</head>
+<section class="sobre-nosotros">
+    <div class="que-es">
+        <h2>¿Qué es Low-Yurt?</h2>
+        <p>
+            Low-Yurt es un emprendimiento enfocado en la venta de alimentos Pre-Fit.
+            (Alimentos diseñados para personas que quieren mantenerse en forma, cuidar su alimentación
+            o llevar un estilo de vida fitness) como Parfait, Bowls y Snacks.
+            Tiene como propósito transformar los hábitos alimenticios de sus clientes con su variedad
+            de ingredientes como frutos secos, frutas frescas, también mermelada y yogurt griego,
+            realizado por ellos mismos para garantizar la autenticidad del producto final.
+        </p>
+    </div>
+
+    <div class="mision-vision">
+        <div class="mision">
+            <h2>Misión</h2>
+            <p>
+                Nuestra misión es inspirar y facilitar un estilo de vida más saludable y vibrante para
+                nuestros clientes, ofreciendo productos deliciosos, nutritivos y convenientes como
+                yogures artesanales, prebióticos, barritas energéticas y bowls repletos de sabor y vitalidad.
+                Nos comprometemos a utilizar ingredientes de la más alta calidad, promover el bienestar integral
+                y crear una experiencia de consumo que nutra tanto el cuerpo como el alma, contribuyendo así a
+                una comunidad más consciente y enérgica.
+            </p>
+        </div>
+
+        <div class="vision">
+            <h2>Visión</h2>
+            <p>
+                Nuestra visión es ser la marca líder en bienestar alimentario, inspirando a un mundo más
+                saludable y feliz. Innovaremos constantemente para ofrecer productos deliciosos y nutritivos,
+                transformando la alimentación en una experiencia placentera y sostenible, donde cada bocado
+                nutra el cuerpo y el alma.
+                Lideraremos la revolución del bienestar, creando un futuro donde la salud, el sabor y la
+                sostenibilidad se fusionan. Seremos la fuente de inspiración para una vida plena, ofreciendo
+                productos deliciosos que nutren el cuerpo y el alma.
+            </p>
+        </div>
+    </div>
+</section>

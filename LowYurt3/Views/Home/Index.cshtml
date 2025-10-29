@@ -1,0 +1,298 @@
+﻿@{
+    ViewData["Title"] = "LowYurt";
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 68px;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .pb-3 {
+            padding-bottom: 10px;
+            padding-top: 5px;
+        }
+        .Edit {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            align-content: center;
+            margin-left: 90px;
+            margin-right: 110px;
+            padding-top: 37px;
+            padding-bottom: 37px;
+        }
+
+        div p {
+            /*padding-left: 10px;*/
+            height: 60px;
+        }
+        .container{
+            max-width: 20000px;
+            padding: 5px;
+            margin: 0px;
+        }
+
+        .hero {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://via.placeholder.com/1200x600?text=Fondo+Producto+Estrella');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 1.55s ease-in-out;
+            height: 100%;
+            width: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-size: 100% 150%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .slide-content {
+            z-index: 2;
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+        }
+
+        .products {
+            padding: 20px 20px;
+            text-align: center;
+        }
+
+        .product-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+
+        .testimonials {
+            padding: 5px 5px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location {
+            padding: 20px 20px;
+            text-align: center;
+            margin-bottom: 65px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Slider for "Nuestro Producto Estrella" -->
+    <section class="hero">
+        <div class="slider" id="heroSlider">
+            <div class="slide" style='background-image:url("/img/Publicidad.png")' ;>
+            </div>
+
+            <div class="slide" style='background-image:url("/img/img3.png")' ;>
+                <div class="slide-content">
+                    <h1>NUESTRO PRODUCTO ESTRELLA</h1>
+                    <p>Variedad de sabores naturales</p>
+                    <a asp-area="" asp-controller="Productos" asp-action="Index" class="btn">COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="slide" style='background-image:url("/img/Publicidad2.png")' ;>
+            </div>
+
+            <div class="slide" style='background-image:url("/img/img3.png")' ;>
+                <div class="slide-content">
+                    <h1>NUESTRO PRODUCTO ESTRELLA</h1>
+                    <p>Variedad de sabores naturales</p>
+                    <a asp-area="" asp-controller="Productos" asp-action="Index" class="btn">COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="slide" style='background-image:url("/img/Publicidad3.png")' ;>
+            </div>
+
+        </div>
+        <button class="nav-arrows prev" onclick="changeSlide(-1)">❮</button>
+        <button class="nav-arrows next" onclick="changeSlide(1)">❯</button>
+    </section>
+
+    <!-- Nuestros Productos -->
+    <section class="products">
+        <h2>NUESTROS PRODUCTOS</h2>
+        <p>Deliciosos productos de yogur y frutas</p>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="/img/img9.png" alt="Producto 1">
+                <h3>Parfait 9Oz</h3>
+                <p>
+                    Yogurt Griego,
+                    frutas (2 opciones) y mermelada (2 sabores a elección).
+                </p>
+                <a asp-area="" asp-controller="Productos" asp-action="Index" class="btn">COMPRAR</a>
+            </div>
+            <div class="product-card">
+                <img src="/img/img10.png" alt="Producto 2">
+                <h3>Parfait 16Oz</h3>
+                <p>
+                    Yogurt Griego,
+                    frutas (2 opciones) y mermelada (2 sabores a elección).
+                </p>
+                <a asp-area="" asp-controller="Productos" asp-action="Index" class="btn">COMPRAR</a>
+            </div>
+            <div class="product-card">
+                <img src="/img/Img13.png" alt="Producto 3">
+                <h3>Yogurt 1L Original</h3>
+                <p>
+                    Yogurt griego
+                    original por litro.
+                </p>
+                <a asp-area="" asp-controller="Productos" asp-action="Index" class="btn">COMPRAR</a>
+            </div>
+            <div class="product-card">
+                <img src=" /img/Img7.png" alt="Producto 4">
+                <h3>Yogurt 1L Vainilla</h3>
+                <p>
+                    Yogurt griego sabor
+                    vainilla por litro.
+                </p>
+                <a asp-area="" asp-controller="Productos" asp-action="Index" class="btn">COMPRAR</a>
+            </div>
+            <div class="product-card">
+                <img src="/img/img11.jpg" alt="Producto 1">
+                <h3>Gelatina 9Oz</h3>
+                <p>
+                    Yogurt griego con
+                    mermelada natural a elección.
+                </p>
+                <a asp-area="" asp-controller="Productos" asp-action="Index" class="btn">COMPRAR</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Slider -->
+    <section class="testimonials">
+        <h2>QUÉ DICEN NUESTROS COMPRADORES</h2>
+        <div class="testimonials-slider" id="testiSlider">
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>"¡Delicioso!"</p>
+                <strong>Santa Noel</strong>
+                <small>Bogotá</small>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>"¡Me encanta!"</p>
+                <strong>Albert Jacobs</strong>
+                <small>Bogotá</small>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>"Muy bueno."</p>
+                <strong>Samuel Kim</strong>
+                <small>Bogotá</small>
+            </div>
+            <div class='testimonial'>
+                <div class='stars'>★★★★☆</div>
+                <p>'Excelente calidad.'</p>
+                <strong>María Gómez</strong>
+                <small>Medellín</small>
+            </div>
+            <div class='testimonial'>
+                <div class='stars'>★★★★★</div>
+                <p>'Recomendado 100%.'</p>
+                <strong>Juan Pérez</strong>
+                <small>Cali</small>
+            </div>
+            <div class='testimonial'>
+                <div class='stars'>★★★★★</div>
+                <p>'Increíble sabor.'</p>
+                <strong>Lucía Rodríguez</strong>
+                <small>Barranquilla</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section class="location">
+        <h2>VISÍTANOS</h2>
+        <p>Puedes encontrarnos en nuestro punto fisico</p>
+        <p>Cra 93 #80C 80</p>
+        <div class="map-placeholder">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.361697391288!2d-74.10814082469273!3d4.707076441601574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b4b4de97287%3A0x1a524729c079c353!2sCra.%2093%20%2380C%2080%2C%20Engativ%C3%A1%2C%20Bogot%C3%A1%2C%20Cundinamarca!5e0!3m2!1ses!2sco!4v1758642527347!5m2!1ses!2sco"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+   
+
+    <script>
+        // Hero Slider - Automático
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            const offset = -currentSlide * 100;
+            document.getElementById('heroSlider').style.transform = `translateX(${offset}%)`;
+        }
+
+        setInterval(nextSlide, 6000); // Cambia cada 6 segundos
+
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            const offset = -currentSlide * 100;
+            document.getElementById('heroSlider').style.transform = `translateX(${offset}%)`;
+        }
+
+        // Testimonials Slider - Automático
+        let currentTesti = 0;
+        const testiSlides = document.querySelectorAll('.testimonial');
+        const totalTesti = testiSlides.length;
+        const testiContainer = document.getElementById('testiSlider');
+
+        function nextTesti() {
+            currentTesti = (currentTesti + 1) % totalTesti;
+            const offset = -currentTesti * (50 /6); // 3 tarjetas visibles
+            testiContainer.style.transform = `translateX(${offset}%)`;
+        }
+
+        setInterval(nextTesti, 3000); // Cambia cada 4 segundos
+    </script>
+</body>
+</html>

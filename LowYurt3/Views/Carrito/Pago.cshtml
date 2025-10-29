@@ -1,0 +1,46 @@
+﻿@model List<LowYurt.Models.CarritoItem>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 68px;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<h2>Pagar</h2>
+<h2>Resumen del Pedido</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.NombreProducto</td>
+                <td>@item.Precio.ToString("C")</td>
+                <td>@item.Cantidad</td>
+                <td>@((item.Precio * item.Cantidad).ToString("C"))</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Total: @ViewBag.Total.ToString("C")</h3>
+
+<a asp-action="ConfirmarPago" asp-controller="Carrito" class="btn btn-success">
+    Proceder al pago
+</a>
+
