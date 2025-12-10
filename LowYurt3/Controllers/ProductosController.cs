@@ -18,16 +18,26 @@ namespace LowYurt3.Controllers
         {
             _context = context;
         }
-
-        // GET: Productoes
-        public async Task<IActionResult> Index()
+        
+        public async Task<IActionResult> Index(int? categoriaId)
         {
-            var productos = await _context.Productos
-        .Include(p => p.IdCategoriaNavigation)  // Trae el nombre de la categoría
-        .ToListAsync();
+            // Obtener categorías
+            var categorias = await _context.Categoria.ToListAsync();
+            ViewBag.Categorias = categorias;
 
-            return View(productos);
+            // Filtrar productos
+            var productos = _context.Productos
+                .Include(p => p.IdCategoriaNavigation)
+                .AsQueryable();
+
+            if (categoriaId.HasValue)
+            {
+                productos = productos.Where(p => p.IdCategoria == categoriaId);
+            }
+
+            return View(await productos.ToListAsync());
         }
+
 
         // GET: Productoes/Details/5
         public async Task<IActionResult> Details(int? id)

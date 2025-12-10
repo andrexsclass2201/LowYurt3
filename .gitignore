@@ -1,0 +1,56 @@
+## Visual Studio
+.vs/
+.vs
+*.user
+*.suo
+*.cache
+*.log
+
+## Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+TestResults/
+
+## User-specific files
+*.rsuser
+*.userosscache
+*.sln.docstates
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+project.lock.json
+
+## Rider / JetBrains
+.idea/
+
+## VS Code
+.vscode/
+
+## OS generated files
+.DS_Store
+Thumbs.db
+
+## Publish / output
+publish/
+wwwroot/lib/
+node_modules/
+
+## Entity Framework / Migrations
+Migrations/
+*.dbmdl
+
+## Others
+.env
+*.sqlite
+
+# LowCodeUnit / LowYurt / LowYurt3 crap
+FileContentIndex/
+*.vsid
+*.vsid*
+.vsid*/
+*.vsid*
+FileContentIndex/

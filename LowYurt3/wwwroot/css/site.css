@@ -110,7 +110,7 @@ ul{
 }
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 230px));
     gap: 20px;
     margin-top: 20px;
 }
@@ -171,6 +171,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 footer {
@@ -179,6 +180,11 @@ footer {
     text-align: center;
     border-top: 1px solid #ddd;
     margin-top: 20px;
+    line-height: 35px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
 }
 
 @media (min-width: 800px) {

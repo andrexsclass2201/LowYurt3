@@ -25,6 +25,10 @@ public partial class Cliente
 
     public byte[]? Contraseña { get; set; }
 
+    public string? ResetToken { get; set; }
+    public DateTime? TokenExpiration { get; set; }
+
+
     [NotMapped]
     [Required(ErrorMessage = "Debe ingresar una contraseña.")]
     [DataType(DataType.Password)]

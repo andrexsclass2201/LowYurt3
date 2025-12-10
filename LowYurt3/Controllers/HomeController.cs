@@ -23,10 +23,6 @@ namespace LowYurt3.Controllers
             return View();
         }
 
-        public IActionResult View1()
-        {
-            return View();
-        }
         public IActionResult Carrito()
         {
             return View();
@@ -52,6 +48,10 @@ namespace LowYurt3.Controllers
             return View();
         }
         public IActionResult SobreNosotros()
+        {
+            return View();
+        }
+        public IActionResult Privacidad()
         {
             return View();
         }

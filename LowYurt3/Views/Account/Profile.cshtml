@@ -3,12 +3,75 @@
 @{
     ViewData["Title"] = "Perfil de Usuario";
 }
-<style>
-    .pb-3 {
-        padding-bottom: 10px;
-        padding-top: 80px;
-    }
-</style>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+            margin: 65px;
+            font-family: Arial, sans-serif;
+            background-size: contain;
+        }
+
+        .login-container {
+            text-align: left;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: -90px;
+        }
+
+        .login-container h2 {
+            margin-bottom: 10px;
+        }
+
+        .login-container p {
+            font-size: 0.9em;
+            margin-bottom: 0px;
+            color: #666;
+        }
+
+        .login-container input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-container button {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1em;
+            border: solid #ffffff;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .login-container button:hover {
+            background-color: #00000000;
+            color: #000000;
+            border-color: black;
+        }
+
+        .login-container .links a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .login-container .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
 @if (Model == null)
 {
     <h1>Error: Perfil no disponible</h1>
@@ -19,8 +82,9 @@
 }
 else
 {
+    <a href="/Home/Index" style="color: #000; text-decoration: none;">← Volver</a>
     <h1>Perfil de @Model.Rol</h1>
-
+    <hr />
     <div>
         <dl class="row">
             <dt class="col-sm-2">Nombre</dt>
@@ -59,11 +123,14 @@ else
             <a asp-controller="Account" asp-action="Logout" class="btn btn-primary">Cerrar Sesión</a>
             <a asp-controller="Clientes" asp-action="Index" class="btn btn-primary">Administrar Clientes</a>
             <a asp-controller="Admins" asp-action="Index" class="btn btn-primary">Administrar Administradores</a>
+            <a asp-controller="Pedidos" asp-action="Gestion" class="btn btn-primary">Administrar Pedidos</a>
+
         }
         else if (User.IsInRole("Cliente"))
         {
-            <a asp-controller="Clientes" asp-action="Edit" class="btn btn-primary">Actualizar datos</a>
+            <a asp-controller="Account" asp-action="EditProfile" class="btn btn-primary">Actualizar datos</a>
             <a asp-controller="Account" asp-action="Logout" class="btn btn-primary">Cerrar Sesión</a>
+            <a asp-controller="Pedidos" asp-action="MisPedidos" class="btn btn-primary">Mis Pedidos</a>
         }
     }
     else

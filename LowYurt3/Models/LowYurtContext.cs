@@ -158,6 +158,7 @@ public partial class LowYurtContext : DbContext
         modelBuilder.Entity<PedidoDetalle>(entity =>
         {
             entity.HasKey(e => new { e.IdPedido, e.IdProducto });
+
             entity.ToTable("Pedido_Detalle");
 
             entity.Property(e => e.IdPedido).HasColumnName("Id_Pedido");
@@ -167,34 +168,14 @@ public partial class LowYurtContext : DbContext
             entity.HasOne(d => d.Pedido)
                   .WithMany(p => p.PedidoDetalles)
                   .HasForeignKey(d => d.IdPedido)
-                  .OnDelete(DeleteBehavior.ClientSetNull)
                   .HasConstraintName("FK_PedidoDetalle_Pedido");
 
             entity.HasOne(d => d.Producto)
                   .WithMany(p => p.PedidoDetalles)
                   .HasForeignKey(d => d.IdProducto)
-                  .OnDelete(DeleteBehavior.ClientSetNull)
-                  .HasConstraintName("FK_PedidoDetalle_Producto");
-
-        });
-        modelBuilder.Entity<PedidoDetalle>(entity =>
-        {
-            entity.HasKey(e => new { e.IdPedido, e.IdProducto });
-
-            entity.Property(e => e.IdPedido).HasColumnName("Id_Pedido");
-            entity.Property(e => e.IdProducto).HasColumnName("Id_Producto");
-            entity.Property(e => e.Cantidad).HasColumnName("Cantidad");
-
-            entity.HasOne(d => d.Pedido)
-                  .WithMany(p => p.PedidoDetalles)
-                  .HasForeignKey(d => d.IdPedido)  // 👈 vincula la FK explícitamente
-                  .HasConstraintName("FK_PedidoDetalle_Pedido");
-
-            entity.HasOne(d => d.Producto)
-                  .WithMany(p => p.PedidoDetalles)
-                  .HasForeignKey(d => d.IdProducto) // 👈 vincula la FK explícitamente
                   .HasConstraintName("FK_PedidoDetalle_Producto");
         });
+
 
         modelBuilder.Entity<Producto>(entity =>
         {

@@ -113,6 +113,20 @@
     -->
     <div class="products">
         <h1 class="text-center mb-4">Catálogo de Productos</h1>
+
+        <div class="text-center mb-4">
+            <a asp-action="Index" class="btn btn-secondary m-1">Todos</a>
+
+            @foreach (var cat in ViewBag.Categorias)
+            {
+                <a asp-action="Index"
+                   asp-route-categoriaId="@cat.IdCategoria"
+                   class="btn btn-primary m-1">
+                    @cat.NombreCategoria
+                </a>
+            }
+        </div>
+
         <div class="products-grid">
             @foreach (var item in Model)
             {

@@ -22,53 +22,53 @@
             margin-top: -90px;
         }
 
-            .login-container h2 {
-                margin-bottom: 10px;
-            }
+        .login-container h2 {
+            margin-bottom: 10px;
+        }
 
-            .login-container p {
-                font-size: 0.9em;
-                margin-bottom: 0px;
-                color: #666;
-            }
+        .login-container p {
+            font-size: 0.9em;
+            margin-bottom: 0px;
+            color: #666;
+        }
 
-            .login-container input {
-                display: block;
-                width: 100%;
-                margin: 10px 0;
-                padding: 10px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-            }
+        .login-container input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
 
-            .login-container button {
-                background-color: #000000;
-                color: #fff;
-                padding: 10px 20px;
-                cursor: pointer;
-                width: 100%;
-                font-size: 1em;
-                border: solid #ffffff;
-                border-radius: 5px;
-                font-size: 16px;
-                margin-bottom: 10px;
-            }
+        .login-container button {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1em;
+            border: solid #ffffff;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
 
-            .login-container button:hover {
-                background-color: #00000000;
-                color: #000000;
-                border-color: black;
-            }
+        .login-container button:hover {
+            background-color: #00000000;
+            color: #000000;
+            border-color: black;
+        }
 
-            .login-container .links a {
-                color: #000000;
-                text-decoration: none;
-                font-size: 0.9em;
-            }
+        .login-container .links a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
 
-            .login-container .links a:hover {
-                text-decoration: underline;
-            }
+        .login-container .links a:hover {
+            text-decoration: underline;
+        }
     </style>
 
 </head>
@@ -95,13 +95,27 @@
             </div>
             <button type="submit">INICIAR SESIÓN</button>
         </form>
-        @if (ViewBag.Error != null)
+        @if (TempData["Error"] != null)
         {
-            <p style="color:red">@ViewBag.Error</p>
+            <div id="alerta-temp" class="alert alert-danger text-center" role="alert">
+                @TempData["Error"]
+            </div>
         }
+
+        <script>
+            // 🔹 Hace desaparecer los mensajes después de 3 segundos
+            setTimeout(() => {
+                const alertas = document.querySelectorAll('#alerta-temp');
+                alertas.forEach(a => {
+                    a.style.transition = 'opacity 0.5s ease';
+                    a.style.opacity = '0';
+                    setTimeout(() => a.remove(), 500);
+                });
+            }, 3000);
+        </script>
         <div class="links">
             <p>
-                <a asp-area="" asp-controller="Home" asp-action="Contrasena">¿Ha olvidado su contraseña?</a>
+                <a asp-area="" asp-controller="Account" asp-action="ForgotPassword">¿Ha olvidado su contraseña?</a>
             </p>
             <p>
                 <a asp-area="" asp-controller="Clientes" asp-action="Create">¿Eres nuevo en LowYurt? Crear una cuenta</a>
