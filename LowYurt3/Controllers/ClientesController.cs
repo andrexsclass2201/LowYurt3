@@ -88,6 +88,7 @@ namespace LowYurt3.Controllers
             var cliente = await _context.Clientes.FindAsync(id);
             if (cliente == null)
             {
+
                 return NotFound();
             }
             return View(cliente);

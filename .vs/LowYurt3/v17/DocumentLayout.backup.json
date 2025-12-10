@@ -58,8 +58,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -68,7 +72,7 @@
               "RelativeDocumentMoniker": "LowYurt3\\Controllers\\ClientesController.cs",
               "ToolTip": "C:\\Felipe\\Felipe\\Page\\LowYurt3\\LowYurt3\\Controllers\\ClientesController.cs",
               "RelativeToolTip": "LowYurt3\\Controllers\\ClientesController.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAowE4AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowFoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-23T22:29:24.369Z",
               "EditorCaption": ""
@@ -83,8 +87,7 @@
               "RelativeToolTip": "LowYurt3\\Views\\Clientes\\Edit.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-23T22:27:54.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T22:27:54.028Z"
             },
             {
               "$type": "Document",
@@ -96,8 +99,7 @@
               "RelativeToolTip": "LowYurt3\\Views\\Admins\\Index.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-23T22:14:12.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T22:14:12.952Z"
             },
             {
               "$type": "Document",
@@ -109,8 +111,7 @@
               "RelativeToolTip": "LowYurt3\\Views\\Account\\Profile.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAAAAAEAAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-23T22:02:08.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T22:02:08.321Z"
             },
             {
               "$type": "Document",
